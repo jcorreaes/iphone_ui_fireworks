@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macromedia-extension name="iPhone UI" version="<%= MXI_VERSION %>" type="library" requires-restart="false">
+  <author name="Jorge Correa" />
+  <products>
+    <product name="Fireworks" version="8" primary="true" />
+  </products>
+  <description>
+    iPhone GUI as Adobe Fireworks rich symbols library
+  </description>
+  <ui-access>
+    Check the "Window » Common Library" panel
+  </ui-access>
+  <files>
+<% Dir["*.png","*.jsf"].each do |file| %>
+    <file source="<%= file %>" destination="$fireworks/Configuration/Common Library/iPhone UI/" />
+<% end %>
+  </files>
+</macromedia-extension>
